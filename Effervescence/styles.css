@@ -3,10 +3,6 @@
 	padding: 0;
 	font-family: "Outfit", sans-serif;
 }
-body{
-	position: relative;
-	overflow: hidden;
-}
 *,
 *::after,
 *::before {
@@ -15,8 +11,14 @@ body{
 
 :root {
 	font-size: 18px;
-	overflow-x: hidden;
 }
+
+body {
+	height: 100vh;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
 a:focus,
 button:focus {
@@ -50,6 +52,22 @@ a:focus-visible {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.main-container {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 100vh;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y proximity;
+	scroll-behavior: smooth;
+}
+
+.sections {
+	scroll-snap-align: start;
+
+	width: 100%;
+	height: 100svh;
 }
 
 .mouse-hover {
@@ -112,8 +130,6 @@ form {
 } */
 
 .hero-section {
-	width: 100%;
-	height: 100svh;
 	background: url("./hero-img.png") no-repeat center;
 	background-size: cover;
 	display: flex;
@@ -122,56 +138,22 @@ form {
 	justify-content: space-between;
 	align-items: center;
 }
-.content-cont {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-}
-
-@keyframes slide-in-right {
-	0% {
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
 
 .content {
-	margin-bottom: 8rem;
 	/* position: absolute; */
 	width: 15rem;
 	height: 11rem;
-	z-index: 300;
-	/* background: rgb(0, 17, 255); */
-	/* background: linear-gradient(130deg, #041d4b 30%, #044868 100%); */
-	background-color: rgb(0, 0, 0, 0.5);
+	background: rgb(0, 17, 255);
+	background: linear-gradient(130deg, #041d4b 30%, #044868 100%);
 	padding: 2.5rem;
 	text-align: right;
 	display: flex;
 	margin-top: 12rem;
-	border-radius: 20px 0px 0px 20px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
 	gap: 0.4rem;
 	animation: slide-in-right 1s ease-out;
-}
-
-.content h3 {
-	font-weight: 500;
-	font-size: 1.1rem;
-}
-.content p {
-	font-size: 0.9rem;
-	opacity: 0.6;
-}
-.content .applyf {
-	width: 100%;
-	height: fit-content;
-	display: flex;
-	justify-content: flex-end;
 }
 
 .content .apply {
@@ -192,6 +174,7 @@ form {
 	flex-direction: column;
 	gap: 1rem;
 	margin-left: 6rem;
+	margin-top: 1rem;
 }
 
 .hero-text h1 {
@@ -213,6 +196,30 @@ form {
 	filter: brightness(0.6);
 }
 
+.merch {
+	background-color: #080f28;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8rem;
+	color: white;
+}
+.merch-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 22rem;
+}
+
+.intern {
+	background-color: #081630;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	padding: 8rem;
+}
+
 .navbar {
 	position: fixed;
 	background-color: none;
@@ -229,13 +236,27 @@ form {
 	background: linear-gradient(
 		0deg,
 		rgba(0, 0, 0, 0) 50%,
-		rgba(0, 0, 0, 0.4) 100%
+		rgba(0, 0, 0, 0.6) 100%
 	);
 }
-.navbar img {
+
+.logo-cont {
 	position: absolute;
-	width: 14rem;
 	left: calc(8svh);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.4rem;
+	font-size: 2rem;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.logo {
+	width: 3.4rem;
+}
+
+.effe-logo {
+	width: 16rem;
 }
 
 .navbar .menu {
@@ -273,12 +294,7 @@ form {
 		rgba(0, 0, 0, 0.4) 0%,
 		rgba(0, 0, 0, 0) 50%
 	);
-}
-
-.sticky-foot .logo {
-	width: 3rem;
-	right: 0;
-	left: 0;
+	padding: 2rem;
 }
 
 .sticky-foot .foot-text {
@@ -329,10 +345,10 @@ form {
 	transition: all 0.3s;
 }
 
-span{
+span {
 	position: absolute;
 	top: 0;
-	left : 0;
+	left: 0;
 	z-index: 200;
 	width: 2px;
 	height: 2px;
@@ -340,11 +356,12 @@ span{
 	border-radius: 50%;
 	animation: animate 3s linear infinite;
 	transition: all;
-	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 8px rgba(255, 255, 255, 1);
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1),
+		0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 8px rgba(255, 255, 255, 1);
 }
 
-span::before{
-	content: '';
+span::before {
+	content: "";
 	position: absolute;
 	top: 50%;
 	width: 300px;
@@ -354,82 +371,82 @@ span::before{
 }
 
 @keyframes animate {
-	0%{
+	0% {
 		display: none;
 		transform: rotate(-145deg) translateX(0);
 		opacity: 0;
 	}
-	10%{
-		opacity:1;
-	}
-	50%{
+	10% {
 		opacity: 1;
 	}
-	100%{
+	50% {
+		opacity: 1;
+	}
+	100% {
 		opacity: 0;
 		transform: rotate(-145deg) translateX(-1000px);
 	}
 }
 
-span:nth-child(1){
+span:nth-child(1) {
 	left: 300px;
 	top: 100px;
 	animation-duration: 2.7s;
 	/* animation-delay: 2s; */
 }
-span:nth-child(2){
+span:nth-child(2) {
 	left: 180px;
 	top: 200px;
 	animation-duration: 3s;
 	/* animation-delay: 4s; */
 }
-span:nth-child(3){
+span:nth-child(3) {
 	left: 180px;
 	top: 100px;
 	animation-duration: 2.7s;
 	/* animation-delay: 2.5s; */
 }
-span:nth-child(4){
+span:nth-child(4) {
 	left: 350px;
 	top: 0px;
 	animation-duration: 3.2s;
 	/* animation-delay: 1s; */
 }
-span:nth-child(5){
+span:nth-child(5) {
 	left: 450px;
 	top: 50px;
 	animation-duration: 3.5s;
 	/* animation-delay: 1.5s; */
 }
-span:nth-child(6){
+span:nth-child(6) {
 	left: 510px;
 	animation-duration: 3s;
 	/* animation-delay: 1s; */
 }
-span:nth-child(7){
+span:nth-child(7) {
 	left: 670px;
 	top: 40px;
 	animation-duration: 2.7s;
 	/* animation-delay: 1.2s; */
 }
-span:nth-child(8){
+span:nth-child(8) {
 	left: 600px;
 	top: 150px;
 	animation-duration: 2.5s;
 	/* animation-delay: 1.7s; */
 }
-span:nth-child(9){
+span:nth-child(9) {
 	left: 780px;
 	top: 70px;
 	animation-duration: 3s;
 	/* animation-delay: 2s; */
 }
-span:nth-child(10){
+span:nth-child(10) {
 	left: 810px;
 	animation-duration: 2.7s;
 	/* animation-delay: 2.3s; */
 }
-span:nth-child(11){
+span:nth-child(11) {
 	left: 900px;
 	animation-duration: 2.6s;
 	/* animation-delay: 2.6s; */
