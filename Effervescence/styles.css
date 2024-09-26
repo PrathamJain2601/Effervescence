@@ -211,12 +211,35 @@ form {
 }
 
 .hero-text p {
-	padding-left: 12px;
 	font-size: 1.2rem;
 	overflow: visible;
 	text-wrap: nowrap;
 	font-weight: 400;
 	filter: brightness(0.6);
+}
+
+.learn {
+	text-decoration: none;
+	color: white;
+	font-weight: 600;
+	font-size: 1.2rem;
+	position: relative;
+}
+.learn::after {
+	content: "";
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	height: 2px;
+	transform: scaleY(0);
+	transition: transform 0.3s;
+	transform-origin: bottom;
+	background-color: white;
+}
+.learn:hover::after {
+	transform: scaleY(1);
 }
 
 .merch {
@@ -384,6 +407,7 @@ form {
 	transition: all;
 	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1),
 		0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 8px rgba(255, 255, 255, 1);
+	opacity: 0;
 }
 
 .stars::before {
@@ -394,6 +418,7 @@ form {
 	transform: translateY(-50%);
 	height: 1px;
 	background: linear-gradient(90deg, #fff, transparent);
+	/* opacity: 0; */
 }
 
 @keyframes animate {
@@ -480,11 +505,11 @@ form {
 	.hero-text p {
 		font-size: 1rem;
 	}
-	.content {
+	/* .content {
 		width: 12rem;
 		height: 9rem;
 		padding: 2rem;
-	}
+	} */
 	.btn {
 		padding: 1rem 2rem;
 		font-size: 1rem;
@@ -555,10 +580,16 @@ form {
 	.hero-text p {
 		font-size: 0.8rem;
 	}
-	.content {
+	/* .content {
 		width: 8rem;
 		height: 6rem;
 		padding: 1rem;
+	} */
+	.content {
+		scale: 0.7;
+		right: 0.2rem;
+		bottom: 0.2rem;
+		padding: 1.5rem;
 	}
 	.btn {
 		padding: 0.6rem 1rem;
@@ -597,12 +628,12 @@ form {
 	.hero-text p {
 		font-size: 0.7rem;
 	}
-	.content {
+	/* .content {
 		width: 6rem;
 		height: 5rem;
 		padding: 0.8rem;
 		margin: 0;
-	}
+	} */
 	.btn {
 		padding: 0.5rem 0.8rem;
 		font-size: 0.7rem;
