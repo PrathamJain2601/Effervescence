@@ -13,17 +13,6 @@
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
 		<div class="main-container">
 			<div class="mouse-hover" id="move"></div>
 			<nav class="navbar">
@@ -43,6 +32,17 @@
 				<!-- </div> -->
 			</nav>
 			<div class="hero-section sections" id="hero">
+				<span class="stars"></span>
+				<span class="stars"></span>
+				<span class="stars"></span>
+				<span class="stars"></span>
+				<span class="stars"></span>
+				<span class="stars"></span>
+				<span class="stars"></span>
+				<span class="stars"></span>
+				<span class="stars"></span>
+				<span class="stars"></span>
+				<span class="stars"></span>
 				<!-- <video id="bg-vid" autoplay loop muted>
 					<source src="./bg.mp4" type="video/mp4" />
 				</video> -->
@@ -51,48 +51,23 @@
 					<p>Be the representative of your campus</p>
 				</div>
 				<div class="content">
-					<form
-						action="https://docs.google.com/forms/d/e/1FAIpQLSc6wA35u5u10k2Zdahsz3IJwm5vlNlq0C25Ov0EtRdcJUeCzQ/viewform"
-						target="_blank"
-					>
-						<button type="submit" class="apply">APPLY NOW</button>
-					</form>
-				</div>
-			</div>
-			<div class="merch sections" id="merch">
-				<div class="merch-container">
-					<div class="m-img"></div>
-					<div class="m-desc">
-						<h1>Merchandise</h1>
-						<p>
-							Get your hands on exclusive Effervescence merchandise! From
-							stylish tees to cool accessories, represent the spirit of the fest
-							wherever you go. Browse our collection and show off your fest
-							pride in style!
-						</p>
+					<div class="circle">
+						<button class="button button--skoll" id="apply-now">
+							<span><span>Apply Now</span></span>
+						</button>
+						<!-- <div class="logo-intern"></div> -->
+						<div class="text">
+							<p>Internship Program - Effervescence -</p>
+						</div>
 					</div>
+					<script>
+						document.getElementById("apply-now").onclick = function () {
+							location.href = "https://forms.gle/7Q6Q6Q7Q6Q7Q6Q7Q6";
+						};
+					</script>
 				</div>
 			</div>
-			<div class="intern sections" id="intern">
-				<div class="intern-container">
-					<div class="i-img"></div>
-					<div class="i-desc">
-						<h1>Online Internship</h1>
-						<p>
-							Boost your skills with our exclusive online internship
-							opportunities! Join hands with leading organizations, work on
-							exciting projects, and gain real-world experience, all while being
-							a part of Effervescence. Apply now to kickstart your career from
-							the comfort of your home! These internships are designed to
-							enhance your professional journey by offering mentorship,
-							networking opportunities, and real-time problem-solving tasks.
-							Whether you're a beginner or an experienced student, there’s
-							something for everyone. Don’t miss the chance to elevate your
-							resume and build valuable industry connections."
-						</p>
-					</div>
-				</div>
-			</div>
+
 			<div class="sticky-foot">
 				<div class="socials">
 					<div><img src="./facebook.png" alt="facebook" /></div>
