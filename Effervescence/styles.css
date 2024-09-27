@@ -537,7 +537,7 @@ form {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 	.main-container {
 		width: 100vw;
 	}
@@ -606,7 +606,7 @@ form {
 		position: fixed;
 		width: 100vw;
 		height: 2rem;
-		padding: 1rem;
+		padding: 1.5rem 1rem;
 	}
 	.sticky-foot .foot-text {
 		right: 1rem;
@@ -620,7 +620,7 @@ form {
 	}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 680px) {
 	.hero-text h1 {
 		font-size: 4rem;
 		line-height: 4rem;
@@ -628,16 +628,11 @@ form {
 	.hero-text p {
 		font-size: 0.7rem;
 	}
-	/* .content {
-		width: 6rem;
-		height: 5rem;
-		padding: 0.8rem;
-		margin: 0;
-	} */
 	.btn {
 		padding: 0.5rem 0.8rem;
 		font-size: 0.7rem;
 	}
+
 	.navbar .menu {
 		flex-direction: column;
 		gap: 1rem;
@@ -652,114 +647,20 @@ form {
 		left: 2svh;
 	}
 	.sticky-foot {
-		flex-direction: column;
-		padding: 1rem 2vh;
+		/* flex-direction: column; */
+		padding: 1rem 4vh;
 	}
-	.sticky-foot .foot-text,
+	/* .sticky-foot .foot-text,
 	.sticky-foot .socials {
 		position: static;
-	}
-
-	/* navbar */
-
-	/* .navbar {
-		z-index: 3;
-	}
-
-	.navbar ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		overflow: hidden;
-	}
-
-	.navbar li a {
-		display: block;
-		padding: 20px 20px;
-		border-right: 1px solid #f4f4f4;
-		text-decoration: none;
-	}
-
-	.navbar li a:hover,
-	.navbar .menu-btn:hover {
-		background-color: #f4f4f4;
 	} */
 
 	.navbar .menu {
 		display: none;
-		/* clear: both;
-		position: absolute;
-		max-height: 0;
-		width: 100vw;
-		height: 100vh;
-		pointer-events: none;
-		transition: max-height 0.2s ease-out;
-		list-style: none;
-		overflow: hidden; */
 	}
-
-	/* .navbar .menu-icon {
-		cursor: pointer;
-		display: inline-block;
-		padding: 28px 20px;
-		position: relative;
-		user-select: none;
-	}
-
-	.navbar .menu-icon .navicon {
-		background: #333;
-		display: block;
-		height: 2px;
-		position: relative;
-		transition: background 0.2s ease-out;
-		width: 18px;
-	}
-	.navbar .menu-icon .navicon:before,
-	.navbar .menu-icon .navicon:after {
-		background: #333;
-		content: "";
-		display: block;
-		height: 100%;
-		position: absolute;
-		transition: all 0.2s ease-out;
-		width: 100%;
-	}
-
-	.navbar .menu-icon .navicon:before {
-		top: 5px;
-	}
-
-	.navbar .menu-icon .navicon:after {
-		top: -5px;
-	}
-
-	.navbar .menu-btn {
-		display: none;
-	}
-
-	.navbar .menu-btn:checked ~ .menu {
-		max-height: 240px;
-	}
-
-	.navbar .menu-btn:checked ~ .menu-icon .navicon {
-		background: transparent;
-	}
-
-	.navbar .menu-btn:checked ~ .menu-icon .navicon:before {
-		transform: rotate(-45deg);
-	}
-
-	.navbar .menu-btn:checked ~ .menu-icon .navicon:after {
-		transform: rotate(45deg);
-	}
-
-	.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-	.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-		top: 0;
-	}  */
 }
 
-/* button */
+/* apply now button */
 .button {
 	pointer-events: auto;
 	cursor: pointer;
