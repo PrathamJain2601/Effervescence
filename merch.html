@@ -3,13 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Incentives | Effervescence</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap"
-			rel="stylesheet"
-		/>
+		<title>Document</title>
 		<link rel="stylesheet" href="styles.css" />
 		<style>
 			* {
@@ -19,7 +13,7 @@
 			body {
 				height: 100vh;
 				width: 100vw;
-				background: url("about.jpeg");
+				background: url("public/about.jpeg");
 				background-repeat: no-repeat;
 				background-size: cover;
 				position: relative;
@@ -43,7 +37,7 @@
 				color: white;
 				position: absolute;
 				transform: translate(-50%, -50%);
-				top: 50%;
+				top: 60%;
 				left: 50%;
 				width: 500px;
 				text-align: center;
@@ -320,6 +314,73 @@
 				left: 1150px;
 				animation-delay: 0.7s;
 			}
+			@media (max-width: 500px) {
+				.about-text {
+					color: white;
+					position: absolute;
+					transform: translate(-50%, -50%);
+					top: 57%;
+					left: 50%;
+					width: 350px;
+					text-align: center;
+				}
+				.about-text h1 {
+					font-size: 2rem;
+				}
+				.about-text p {
+					font-size: 1rem;
+					line-height: 2rem;
+				}
+
+				.about-circle {
+					height: 70px;
+					width: 70px;
+					position: absolute;
+					background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREl2A3MYdK1QshoFIoDpIIoqOXjk3KccSqhg&s");
+					background-size: contain;
+					border-radius: 50%;
+					transform: translate(-50%, -50%);
+					top: 20%;
+					border: 4px white solid;
+					left: 38%;
+				}
+				.about-circle-2 {
+					height: 70px;
+					width: 70px;
+					position: absolute;
+					background: url("https://a10.gaanacdn.com/gn_img/artists/zLp36v3rGe/Lp36BL5v3r/size_m_1720183611.jpg");
+					background-size: contain;
+					border-radius: 50%;
+					border: 4px white solid;
+					transform: translate(-50%, -50%);
+					top: 20%;
+					left: 13%;
+				}
+				.about-circle-3 {
+					height: 70px;
+					width: 70px;
+					position: absolute;
+					border: 4px white solid;
+					background: url("https://i.scdn.co/image/ab6761610000e5eb357df5037e26bf16917825fc");
+					background-size: cover;
+					border-radius: 50%;
+					transform: translate(-50%, -50%);
+					top: 20%;
+					left: 62%;
+				}
+				.about-circle-4 {
+					height: 70px;
+					width: 70px;
+					position: absolute;
+					border: 4px white solid;
+					background: url("https://pbs.twimg.com/profile_images/1641508263068852225/60E1spfk_400x400.jpg");
+					background-size: cover;
+					border-radius: 50%;
+					transform: translate(-50%, -50%);
+					top: 20%;
+					left: 87%;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -374,12 +435,11 @@
 		<span></span>
 		<span></span>
 
-		<div class="mouse-hover" id="move"></div>
 		<nav class="navbar">
 			<!-- <div class="logo-main"> -->
 			<div class="logo-cont">
-				<img class="logo" src="./logo.png" alt="effe logo" />
-				<img class="effe-logo" src="./effe_long.png" alt="effe logo" />
+				<img class="logo" src="./public/logo.png" alt="effe logo" />
+				<img class="effe-logo" src="./public/effe_long.png" alt="effe logo" />
 			</div>
 			<!-- </div> -->
 			<!-- <div class="menu-cont"> -->
@@ -393,38 +453,16 @@
 		</nav>
 		<div class="about-text">
 			<h1>Incentives</h1>
-			<div class="about-sub">
-				<div style="display: flex; gap: 2rem">
-					<img class="merch-img" src="./merch1.jpg" alt="merch1" />
-					<img class="merch-img" src="./merch2.jpg" alt="merch2" />
-				</div>
-				<p>
-					Ambassador Incentives Top-performing ambassadors will receive
-					exclusive goodies official Effervescence merchandise and two
-					complimentary passes to the fest
-				</p>
-			</div>
+			<p>
+				Ambassador Incentives Top-performing ambassadors will receive: Exclusive
+				goodies Official Effervescence merchandise Two complimentary
+				passes to the fest
+			</p>
 		</div>
 
-		<div class="sticky-foot">
-			<div class="socials">
-				<div>
-					<a href="https://www.instagram.com/goeffervescence" target="_blank"
-						><img src="./instagram.png" alt="facebook"
-					/></a>
-				</div>
-				<div>
-					<a
-						href="https://www.linkedin.com/company/effe.iiita/"
-						target="_blank"
-					>
-						<img src="./linkedin.png" alt="linkedin"
-					/></a>
-				</div>
-			</div>
-
-			<div class="foot-text">ⓒ Effervescence by IIIT Allahabad</div>
-		</div>
-		<script src="./index.js"></script>
+		<div class="about-circle"></div>
+		<div class="about-circle-2"></div>
+		<div class="about-circle-3"></div>
+		<div class="about-circle-4"></div>
 	</body>
 </html>

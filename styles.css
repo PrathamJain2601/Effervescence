@@ -112,7 +112,7 @@ form {
 }
 
 .hero-section {
-	background: url("./hero-img.png") no-repeat center;
+	background: url("./public/hero-img.png") no-repeat center;
 	background-size: cover;
 	display: flex;
 	color: white;
