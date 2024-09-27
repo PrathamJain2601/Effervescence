@@ -32,6 +32,72 @@
             box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 8px rgba(255, 255, 255, 1);
         }
 
+        .about-text{
+            color: white;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top:60%;
+            left:50%;
+            width:500px;
+            text-align: center;
+        }
+        .about-text h1{
+            font-size: 3rem;
+        }
+        .about-text p{
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+
+        .about-circle{
+            height:120px;
+            width:120px;
+            position: absolute;
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREl2A3MYdK1QshoFIoDpIIoqOXjk3KccSqhg&s");
+            background-size: contain;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%; 
+            border: 4px white solid;
+            left: 25%;
+        }
+        .about-circle-2{
+            height:120px;
+            width:120px;
+            position: absolute;
+            background: url("https://a10.gaanacdn.com/gn_img/artists/zLp36v3rGe/Lp36BL5v3r/size_m_1720183611.jpg");
+            background-size: contain;
+            border-radius: 50%;
+            border: 4px white solid;
+            transform: translate(-50%, -50%);
+            top: 70%; 
+            left: 15%;
+        }
+        .about-circle-3{
+            height:120px;
+            width:120px;
+            position: absolute;
+            border: 4px white solid;
+            background: url("https://i.scdn.co/image/ab6761610000e5eb357df5037e26bf16917825fc");
+            background-size: cover;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            top: 29%; 
+            left: 71%;
+        }
+        .about-circle-4{
+            height:120px;
+            width:120px;
+            position: absolute;
+            border: 4px white solid;
+            background: url("https://pbs.twimg.com/profile_images/1641508263068852225/60E1spfk_400x400.jpg");
+            background-size: cover;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            top: 55%; 
+            left: 80%;
+        }
+
         @keyframes animate {
             0%{
                 opacity: 0;
@@ -142,13 +208,30 @@
     <span></span>
 
     <nav class="navbar">
-        <img src="./effe_long.png" alt="effe logo" />
-
+        <!-- <div class="logo-main"> -->
+        <div class="logo-cont">
+            <img class="logo" src="./logo.png" alt="effe logo" />
+            <img class="effe-logo" src="./effe_long.png" alt="effe logo" />
+        </div>
+        <!-- </div> -->
+        <!-- <div class="menu-cont"> -->
         <ul class="menu">
-            <li><a href="#">HOME</a></li>
+            <li><a href="#merch">MERCH</a></li>
+            <li><a href="#">INTERNSHIP</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACT</a></li>
         </ul>
+        <!-- </div> -->
     </nav>
+    <div class="about-text">
+        <h1>About Us</h1>
+        <p>Effervescence has solidified its position as a cornerstone of North India's cultural landscape, with a legacy spanning 18 years of excellence. Building upon this storied history, we are committed to raising the bar even higher this year. Our stage has been graced by acclaimed artists like Darshan Raval, Samay Raina, Neeti Mohan, Anubhav Singh Bassi and many more in the past, creating captivating performances that have left lasting impressions.</p>
+    </div>
+
+    <div class="about-circle"></div>
+    <div class="about-circle-2"></div>
+    <div class="about-circle-3"></div>
+    <div class="about-circle-4"></div>
+
 </body>
 </html>
