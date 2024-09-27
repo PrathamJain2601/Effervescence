@@ -11,10 +11,9 @@
 }
 
 body {
-	/* font-size: 18px; */
 	height: 100svh;
 	width: 100vw;
-	/* overflow: hidden; */
+	overflow: hidden;
 	scroll-behavior: smooth;
 	background-color: #080f28;
 }
@@ -119,6 +118,7 @@ form {
 	color: white;
 	justify-content: space-between;
 	align-items: center;
+	/* z-index: -1; */
 	/* position: relative; */
 }
 
@@ -199,6 +199,7 @@ form {
 	gap: 1rem;
 	margin-left: 6rem;
 	margin-top: 1rem;
+	z-index: 10;
 }
 
 .hero-text h1 {
@@ -375,7 +376,7 @@ form {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 3;
+	z-index: 0;
 	width: 2px;
 	height: 2px;
 	background: #fff;
@@ -401,7 +402,7 @@ form {
 @keyframes animate {
 	0% {
 		display: none;
-		transform: rotate(-145deg) translateX(0);
+		transform: rotate(-145deg) translateX(10vw);
 		opacity: 0;
 	}
 	10% {
@@ -588,6 +589,9 @@ form {
 }
 
 @media (max-width: 680px) {
+	.hero-text {
+		margin-top: 4rem;
+	}
 	.hero-text h1 {
 		font-size: 5.6rem;
 		line-height: 5.3rem;
@@ -612,9 +616,7 @@ form {
 		left: 2svh;
 	}
 	.sticky-foot {
-		/* flex-direction: column; */
 		padding: 1.5rem;
-		/* display: none; */
 	}
 	.sticky-foot .foot-text {
 		font-size: 0.8rem;
