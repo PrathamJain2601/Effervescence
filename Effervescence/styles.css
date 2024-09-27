@@ -716,3 +716,35 @@ form {
 		transform: translate3d(0, 0, 0);
 	}
 }
+
+/* incentives */
+.about-text {
+	width: 60%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 2rem;
+}
+.about-text h1 {
+	font-size: 5rem;
+}
+.about-sub {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 4rem;
+	width: 100%;
+}
+.about-sub p {
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin: 0;
+}
+.merch-img {
+	width: 10rem;
+	aspect-ratio: 1/1;
+	border-radius: 100%;
+}
