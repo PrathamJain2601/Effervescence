@@ -10,14 +10,13 @@
 	box-sizing: border-box;
 }
 
-:root {
-	font-size: 18px;
-}
-
 body {
-	height: 100vh;
-	overflow: hidden;
+	/* font-size: 18px; */
+	height: 100svh;
+	width: 100vw;
+	/* overflow: hidden; */
 	scroll-behavior: smooth;
+	background-color: blue;
 }
 
 /* Focus styles */
@@ -50,10 +49,8 @@ a:focus-visible {
 }
 
 .main-container {
-	overflow-y: hidden;
-	overflow-x: hidden;
-	height: 100vh;
-	scroll-snap-points-y: repeat(100vh);
+	height: 100svh;
+	scroll-snap-points-y: repeat(100svh);
 	scroll-snap-type: y proximity;
 	scroll-behavior: smooth;
 }
@@ -62,6 +59,8 @@ a:focus-visible {
 	scroll-snap-align: start;
 	width: 100%;
 	height: 100svh;
+	/* overflow: hidden; */
+	position: relative;
 }
 
 .mouse-hover {
@@ -120,6 +119,7 @@ form {
 	color: white;
 	justify-content: space-between;
 	align-items: center;
+	/* position: relative; */
 }
 
 .content {
@@ -212,7 +212,6 @@ form {
 
 .hero-text p {
 	font-size: 1.2rem;
-	overflow: visible;
 	text-wrap: nowrap;
 	font-weight: 400;
 	filter: brightness(0.6);
@@ -269,6 +268,8 @@ form {
 
 .navbar {
 	position: fixed;
+	z-index: 100;
+	top: 0;
 	background-color: none;
 	width: 100%;
 	height: fit-content;
@@ -543,7 +544,7 @@ form {
 	}
 	.sections {
 		width: 100vw;
-		height: 100vh;
+		height: 100svh;
 	}
 	.navbar {
 		padding: 2rem;
@@ -632,11 +633,6 @@ form {
 		padding: 0.5rem 0.8rem;
 		font-size: 0.7rem;
 	}
-
-	.navbar .menu {
-		flex-direction: column;
-		gap: 1rem;
-	}
 	.menu li a {
 		font-size: 0.7rem;
 	}
@@ -648,13 +644,12 @@ form {
 	}
 	.sticky-foot {
 		/* flex-direction: column; */
-		padding: 1rem 4vh;
+		padding: 1rem;
+		/* display: none; */
 	}
-	/* .sticky-foot .foot-text,
-	.sticky-foot .socials {
-		position: static;
-	} */
-
+	.sticky-foot .foot-text {
+		font-size: 0.8rem;
+	}
 	.navbar .menu {
 		display: none;
 	}
