@@ -610,8 +610,11 @@ form {
 		padding: 0.5rem 0.8rem;
 		font-size: 0.7rem;
 	}
-	.menu li a {
-		font-size: 0.7rem;
+	.menu a {
+		font-size: 0.6rem;
+	}
+	.navbar .menu {
+		gap: 0.9rem;
 	}
 	.navbar {
 		justify-content: space-between;
@@ -646,8 +649,9 @@ form {
 		position: relative;
 		top: 50px;
 		right: 50px; */
-		position: absolute;
-		right: 2rem;
+		position: relative;
+		display: block;
+		left: 82vw;
 
 		z-index: 1;
 
@@ -706,7 +710,7 @@ form {
  */
 	#menuToggle input:checked ~ span {
 		opacity: 101;
-		transform: rotate(45deg) translate(-2px, -1px);
+		transform: rotate(45deg);
 		background: white;
 	}
 
@@ -722,7 +726,7 @@ form {
  * Ohyeah and the last one should go the other direction
  */
 	#menuToggle input:checked ~ span:nth-last-child(2) {
-		transform: rotate(-45deg) translate(0, -1px);
+		transform: rotate(-45deg);
 	}
 
 	/*
@@ -731,9 +735,10 @@ form {
  */
 	#menu {
 		position: absolute;
+		right: -1.55rem;
+		top: -5rem;
 		width: 105vw;
-		height: 100svh;
-		margin: -45px 0 0 -435px;
+		height: 110svh;
 		/* padding: 50px;
 		padding-top: 125px; */
 		flex-direction: column;
@@ -751,7 +756,7 @@ form {
 	}
 
 	#menu a {
-		font-size: 3rem;
+		font-size: 2.4rem;
 	}
 	#menu a::after {
 		content: "";
@@ -781,6 +786,16 @@ form {
 	#menuToggle input:checked ~ ul {
 		transform: none;
 	}
+}
+
+/* contact us */
+.stars-holder {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 /* apply now button */
