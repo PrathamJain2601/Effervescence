@@ -613,9 +613,7 @@ form {
 	.menu a {
 		font-size: 0.6rem;
 	}
-	.navbar .menu {
-		gap: 0.9rem;
-	}
+
 	.navbar {
 		justify-content: space-between;
 	}
@@ -743,6 +741,7 @@ form {
 		padding-top: 125px; */
 		flex-direction: column;
 		z-index: 100;
+		gap: 0.05rem;
 
 		background: black;
 		list-style-type: none;
@@ -877,7 +876,7 @@ form {
 	}
 }
 
-/* incentives */
+/* merch */
 .about-text {
 	width: 60%;
 	text-align: center;
@@ -901,10 +900,28 @@ form {
 .about-sub p {
 	font-size: 1.5rem;
 	font-weight: 400;
+	/* text-align: justify; */
 	margin: 0;
 }
 .merch-img {
-	width: 10rem;
+	width: 20rem;
 	aspect-ratio: 1/1;
 	border-radius: 100%;
+	border: 2px solid white;
+}
+
+@media (max-width: 680px) {
+	.about-text {
+		width: 80%;
+	}
+	.about-text h1 {
+		font-size: 4rem;
+	}
+	.about-sub p {
+		font-size: 1.5rem;
+		line-height: 1.7 rem;
+	}
+	.merch-img {
+		width: 11rem;
+	}
 }
